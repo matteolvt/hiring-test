@@ -1,0 +1,22 @@
+.user-card {
+    display:flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 30px; 
+}
+
+.user-card h2 {
+    font-family: 'Karantina';
+    font-size: 40px;
+    color: #000000; 
+    margin : 0; 
+    font-weight: bold;
+}
+
+.user-card img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #d1d5db;  
+}

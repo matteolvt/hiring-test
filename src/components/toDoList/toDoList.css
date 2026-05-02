@@ -1,0 +1,84 @@
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+    padding: 40px 60px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    max-width: 450px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+}
+.todo-header {
+    border: 3px solid #CB0000;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Karantina';
+    font-size: 40px;
+    padding: 5px 0;
+    margin-bottom: 40px;
+    color: #000000; 
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    gap: 15px; 
+}
+
+.custom-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 32px;
+    height: 32px;
+    border: 5px solid #000000;
+    border-radius : 25%;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    margin : 0;
+}
+
+.custom-checkbox:checked {
+    background-color: #000000;
+}
+
+.task-text {
+    flex-grow: 1;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    font-family: 'Karantina', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888888;
+}
+
+.delete-btn {
+    background: none; 
+    border: none;
+    font-size: 1.5rem; 
+    cursor: pointer;
+    padding: 0 0 5px 0; 
+    flex-shrink: 0;
+}

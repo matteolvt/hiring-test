@@ -1,12 +1,13 @@
 import React from "react";
-// import Navbar from "../components/navbar/navbar";
-import UserCard from "../components/userCard/userCard";
+import Header from "../components/header/header";
+import ToDoList from "../components/toDoList/toDoList";
+import "./homepage.css";
 
 const Homepage = () => {
   return (
     <div className="homepage">
-      {/* <Navbar /> */}
-      <UserCard user="matteolvt" />
+      <Header />
+      <ToDoList />
     </div>
   );
 };

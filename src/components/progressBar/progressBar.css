@@ -1,0 +1,12 @@
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: "20px";
+    font-family: 'karantina';
+    font-size: 32px;
+}
+
+.progress-container p {
+    margin-bottom: 10px;
+}
