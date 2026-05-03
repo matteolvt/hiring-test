@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import "./toDoList.css";
 import ProgressBar from "../progressBar/progressBar";
 import AddTask from "../addTask/AddTask";

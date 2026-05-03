@@ -1,17 +1,40 @@
-# React + Vite
+# Siemens — Hiring Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web front-end consommant l'API [restful-api.dev](https://api.restful-api.dev).
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 18 + Vite
+- JavaScript / JSX
+- CSS vanilla
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+src/
+├── components/
+│ ├── addTask/
+│ ├── header/
+│ ├── progressBar/
+│ ├── toDoList/
+│ └── userCard/
+├── pages/
+│ └── homepage/
 
-## Expanding the ESLint configuration
+## Lancer le projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# hiring-test
+```bash
+npm install
+npm run dev
+```
+
+L'application sera disponible sur `http://localhost:5173`.
+
+## Choix techniques
+
+-Architecture par composants : l'application est découpée en blocs logiques réutilisables (AddTask, ProgressBar). Le composant parent ToDoList orchestre l'ensemble.
+
+-Lifting State Up (Remontée de l'état) : l'état des tâches (tasks) est centralisé dans le parent. Les composants enfants communiquent via des fonctions passées en props (comme onAdd).
+
+-Calcul d'état dérivé : les statistiques de progression (6/10 tâches) ne sont pas stockées en base. Elles sont calculées dynamiquement à chaque rendu à partir du tableau de tâches, garantissant une source de vérité unique.
+
+-Immuabilité des données : les mises à jour du tableau (ajout, suppression, toggle) utilisent systématiquement des méthodes non-mutables (map, filter, spread operator) pour respecter le cycle de vie de React.
